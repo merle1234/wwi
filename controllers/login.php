@@ -13,4 +13,8 @@ class login
     
 }
 
+if($_POST){
+    echo"succesvol ingeloggd";
+}
+
 ?>

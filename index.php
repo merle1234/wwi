@@ -37,7 +37,7 @@ class layout extends siteParts
         if(empty($_GET))
         {
             $_GET['controller'] = 'content';
-            $_GET['action'] = 'show';
+            $_GET['action'] = 'home';
         }
         $this->getLayout();
     }

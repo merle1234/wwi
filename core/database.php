@@ -8,7 +8,7 @@ class database
         $hostname = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "test";
+        $dbname = "wideworldimporters";
 
         $this->conn = new \mysqli($hostname, $username, $password, $dbname);
 

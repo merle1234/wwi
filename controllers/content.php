@@ -15,7 +15,7 @@ class content
     public function Producten()
     {
         $content = array("title" => "puur");
-        require_once('views/example.phtml');   
+        require_once('views/products.phtml');   
     }
 }
 

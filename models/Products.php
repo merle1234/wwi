@@ -5,14 +5,11 @@ class Products
 {
     public function get_products(){
         $conn=new  database();
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        $sql = "SELECT * FROM stockitems";
+        
+       
+        $sql = "SELECT stockitemname FROM stockitems Limit 10";
         $result = $conn->query($sql);
-
+       
         return $result;
     }
 }

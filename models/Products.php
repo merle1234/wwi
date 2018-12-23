@@ -7,7 +7,7 @@ class Products
         $conn=new  database();
         
        
-        $sql = "SELECT stockitemname FROM stockitems";
+        $sql = "SELECT stockitemname,unitprice FROM stockitems where IsChillerStock = 1 ORDER BY stockitemname ASC";
         $result = $conn->query($sql);
        
         return $result;

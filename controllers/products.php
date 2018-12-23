@@ -12,7 +12,7 @@ class products
 
 
         $content = new \models\products();
-        $content->get_products();
+        $result = $content->get_products();
         require_once('views/products.phtml');       
     }
     

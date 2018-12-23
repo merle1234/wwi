@@ -7,7 +7,7 @@ class Products
         $conn=new  database();
         
        
-        $sql = "SELECT stockitemname FROM stockitems Limit 10";
+        $sql = "SELECT stockitemname FROM stockitems";
         $result = $conn->query($sql);
        
         return $result;

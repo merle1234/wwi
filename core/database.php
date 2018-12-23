@@ -21,8 +21,14 @@ class database
 
     public function query($query)
     {
-
-        return mysqli_query($this->conn,$query);
+        $result = mysqli_query($this->conn,$query);
+        $content = array();
+                
+          while($row = $result->fetch_assoc()) {
+              $content[]=$row;
+          };
+         
+        return $content;
 
 
     }

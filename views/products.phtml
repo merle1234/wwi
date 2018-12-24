@@ -1,9 +1,20 @@
 <?php foreach ($result as $product) : ?>
-  <?php echo $product["stockitemname"]; ?><BR>
-  <div class="products">
-    <div class="price">€ <?php echo $product["unitprice"] ; ?></div>
-    <a href="products.phtml">
-       test
-       </a>
-  </div>
+    <div class="products">
+
+    <div class="product-title">
+    <?php echo $product["stockitemname"]; ?><BR>
+    </div>
+<br>
+    <div class="price">
+    <a href="<?php echo $product["StockItemId"]; ?>">
+       test <br>
+      </a>
+     € <?php echo $product["unitprice"] ; ?></div>
+     </div>
+
+    
+Aantal :<input type="text" name="Hoeveel" value="1"  width="20px" style="border:1px solid"/>
+<br>
+<button type="submit">In winkelwagen</button>
+<br><br>
 <?php endforeach; ?>

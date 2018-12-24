@@ -8,7 +8,7 @@ class database
         $hostname = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "test";
+        $dbname = "wideworldimporters";
 
         $this->conn = new \mysqli($hostname, $username, $password, $dbname);
 
@@ -21,8 +21,14 @@ class database
 
     public function query($query)
     {
-
-        return mysqli_query($this->conn,$query);
+        $result = mysqli_query($this->conn,$query);
+        $content = array();
+                
+          while($row = $result->fetch_assoc()) {
+              $content[]=$row;
+          };
+         
+        return $content;
 
 
     }

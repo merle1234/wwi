@@ -9,7 +9,7 @@ class content
     public function Home()
     {
         $content = new \models\content();
-        $content->getAll();
+       // $content->getAll();
         require_once('views/home.phtml');       
     }
     public function Producten()

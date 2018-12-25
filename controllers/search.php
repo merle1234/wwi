@@ -3,7 +3,7 @@
 $server = "localhost";
 $username = "root";
 $password = " ";
-$dbname = "localhost";
+$dbname = "wideworldimporters";
 
 $conn = mysqli_connect($server, $username, $password, $dbname);
 

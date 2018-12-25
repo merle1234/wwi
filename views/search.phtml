@@ -1,0 +1,47 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the header */
+header {
+  background-color: #666;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+  <h2><?php echo $content['title']?></h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <img src="./content/puur.jpg">
+    </ul>
+  </nav>
+  
+  <article>
+    <p>een beschrijving</p>
+  </article>
+</section>
+</body>

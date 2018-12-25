@@ -24,23 +24,176 @@ article {
   padding: 10px;
 }
 
+.titel {
+  height: 60px;
+  background-color: darkbrown;
+  color: black;
+  font-family: Arial;
+  line-height: 2;
+}
 
+.protitle {
+  height: 475px;
+  width: 350px;
+}
+
+.button1 {
+
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-family: arial;
+  border-radius: 12px;
+  text-align: center;
+
+}
+
+.button1:hover {
+    background-color: #e7e7e7;
+}
+
+textfield {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: clear;
+  font-size: 16px;
+  font-family: arial;
+  resize: none;
+}
+
+.product {
+  width:450px;
+  height: 540px;
+  margin: 20px;
+}
+
+.description {
+  height:38px; 
+  width:323px; 
+  font-family: arial; 
+  font-size: 16px; 
+  text-align: center; 
+  line-height: 2.4;
+  border: 1px solid;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.titel2 {
+  width: 400px;
+  font-size: 18px;
+  font-family: arial;
+  line-height: 3.0;
+  color: black;
+  background-color: DodgerBlue;
+  border-radius: 25px;
+  margin: 12px;
+}
+
+.rate {
+  height: 60px;
+  position: relative;
+  line-height: 1.7;
+}
 </style>
+
 </head>
+
 <body>
-<header>
-  <h2><?php echo $content['title']?></h2>
+<header style="height: 100%;">
+<div style="width: 700px;"></div>
+<div class="titel">Homepage</div>
+      <div class="titel2" style="float: right;">Beoordeel onze webshop! 
+      <div class="rank" style="float:right;"> 
+      <div class="rate">
+      <input type="radio" id="star5" name="rate" value="5" />
+      <label for="star5" title="text">5 stars</label>
+      <input type="radio" id="star4" name="rate" value="4" />
+      <label for="star4" title="text">4 stars</label>
+      <input type="radio" id="star3" name="rate" value="3" />
+      <label for="star3" title="text">3 stars</label>
+      <input type="radio" id="star2" name="rate" value="2" />
+      <label for="star2" title="text">2 stars</label>
+      <input type="radio" id="star1" name="rate" value="1" />
+      <label for="star1" title="text">1 star</label>
+    </div>
+    </div>
+    </div>
+  </div>
 </header>
 
-<section>
-  <nav>
-    <ul>
-      <img src="./content/puur.jpg">
-    </ul>
-  </nav>
-  
-  <article>
-    <p>een beschrijving</p>
-  </article>
-</section>
+
+
+<div class="product">
+  <div class="productshow" style="width: 200px; float:left;">
+    <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
+      <article style="width: 200px; font-family: arial; font-size: 16px; border: 1px solid black; text-align:center; color: red; margin:20px; ">Nieuw in ons assortiment!</article> 
+        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
+        <div class="description" style="margin:20px; width: 200px;background-color:rgb(241, 241, 241);">
+        Productomschrijving
+      </div> 
+      </div>
+      <textfield style="height:400px; width:250x; font-size: 12px; position:relative; text-align:center;">Mmm… wat een heerlijke chocoladereep! Zaanse chocolade gemaakt met liefde en dat proef je. Deze chocolade is gemaakt volgens Hollands recept door de échte kenners. Een klein verwenmomentje verpakt in leuke wikkel.</textfield>
+          <div>  
+        <div>
+            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+          </div>
+    </div>
+
+  </div>
+  <div class="productshow1" style="float:right;">
+    <div class="imagebox1" style="witdh: 50px; height: 400px; background-color:white;">
+
+        <div style="width:200px; height:50px;">
+      
+          </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+
+
 </body>

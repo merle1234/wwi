@@ -17,4 +17,25 @@ if($_POST){
     echo"succesvol ingeloggd";
 }
 
+/*include_once("model/login.php");
+class Login {
+    public$model;
+    public function_construct() {
+        $this->model = new Model();
+    }
+
+    public function invoke(){
+        $reslt = $this->model->getlogin();
+        if($reslt == 'login') {
+            include 'view/afterlogin.phtml';
+        }
+        else {
+            include 'view/login.phtml'
+        }
+    }
+    
+}
+*/
 ?>
+
+

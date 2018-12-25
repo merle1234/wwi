@@ -17,7 +17,7 @@ if($_POST){
     echo"succesvol ingeloggd";
 }
 
-/*include_once("model/login.php");
+include_once("model/login.php");
 class Login {
     public$model;
     public function_construct() {
@@ -35,7 +35,7 @@ class Login {
     }
     
 }
-*/
+
 ?>
 
 

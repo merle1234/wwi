@@ -4,7 +4,7 @@ use core\database;
 class login
 
 include_once(“model/login.php”);
-class Login {
+class Model {
 public function getlogin()
 {
 if(isset($_REQUEST[‘username’]) && isset($_REQUEST[‘password’])){

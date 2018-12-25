@@ -18,7 +18,7 @@ if($_POST){
 }
 
 include_once("model/login.php");
-class Login {
+class Controller {
     public$model;
     public function_construct() {
         $this->model = new Model();

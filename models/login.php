@@ -8,7 +8,7 @@ class Login {
 public function getlogin()
 {
 if(isset($_REQUEST[‘username’]) && isset($_REQUEST[‘password’])){
-if($_REQUEST[‘username’]=='root' && $_REQUEST[‘password’]==''){
+if($_REQUEST[‘username’]=='root' && $_REQUEST[‘password’]=='root'){
 return ‘login’;
 }
                         else{

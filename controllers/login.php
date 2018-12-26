@@ -18,7 +18,7 @@ class login
 }*/
 
 include_once("model/login.php");
-class Controller {
+class Login {
     public$model;
     public function_construct() {
         $this->model = new Model();

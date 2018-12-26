@@ -2,8 +2,8 @@
 namespace models;
 use core\database;
 
-include_once(“model/Book.php”);
-class Model {
+include_once(“model/login.php”);
+class Login {
 public function getlogin()
 {
 // here goes some hardcoded values to simulate the database

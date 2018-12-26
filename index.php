@@ -70,7 +70,9 @@ try{
     echo $error;
 }
 
-
+include_once(“controller/login.php”);
+$controller = new Login();
+$controller->invoke();
 
 
 ?>

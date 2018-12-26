@@ -13,9 +13,9 @@ class login
     
 }
 
-if($_POST){
+/*if($_POST){
     echo"succesvol ingeloggd";
-}
+}*/
 
 include_once("model/login.php");
 class Controller {

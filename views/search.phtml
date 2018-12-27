@@ -11,6 +11,166 @@ header {
   color: white;
 }
 
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.article1 {
+width: 200px; 
+font-family: arial; 
+font-size: 16px; 
+border: 1px solid black; 
+text-align:center; color: red; 
+margin:20px; 
+position: relative;
+left: 5px;
+right: 1px;
+}
+
+.titel {
+  height: 60px;
+  background-color: darkbrown;
+  color: black;
+  font-family: Arial;
+  line-height: 2;
+}
+
+.protitle {
+  height: 475px;
+  width: 350px;
+}
+
+.button1 {
+
+  position: relative;
+margin: 20px;
+  color: black;
+  font-size: 16px;
+  font-family: arial;
+  border-radius: 12px;
+  text-align: center;
+
+}
+
+.button1:hover {
+    background-color: #e7e7e7;
+}
+
+.buttondiv {
+  width: 275px;
+  Height: 85px;
+  position: relative;
+  left: 22px;
+  top: 25px;
+}
+
+.logodiv {
+  position: relative;
+  left: 5px;
+}
+
+textfield {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: clear;
+  font-size: 16px;
+  font-family: arial;
+  resize: none;
+}
+
+.product {
+  width:450px;
+  height: 540px;
+  margin: 20px;
+  position: relative;
+  top: 75px;
+}
+}
+
+.description {
+  height:38px; 
+  width:323px; 
+  font-family: arial; 
+  font-size: 16px; 
+  text-align: center; 
+  line-height: 2.4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.titel2 {
+  width: 400px;
+  font-size: 18px;
+  font-family: arial;
+  line-height: 3.0;
+  color: white;
+  background-color: DarkBlue;
+  border-radius: 25px;
+  margin: 12px;
+}
+
+.rate {
+  height: 60px;
+  position: relative;
+  line-height: 1.7;
+}
+
+.logodiv {
+  width: 275px;
+}
+</style>
+
 
 
 </style>
@@ -20,11 +180,15 @@ header {
   <h2>Productoverzicht zoekresultaten</h2>
 </header>
 
-<section>
-  <nav>
-    <ul>
-      <img src="./content/puur.jpg">
-    </ul>
-  </nav>
-  
+<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
+      <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
+      <article class="article1">!</article> 
+        <div class="Logodiv">
+        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
+        </div>
+        <div class="buttondiv">    
+        <button type="submit" style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+        </div>
+      </div>
+    </div>
 </body>

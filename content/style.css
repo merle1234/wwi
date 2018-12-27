@@ -80,3 +80,11 @@ li a:hover:not(.active) {
   
 }
 
+.search-container {
+  font-family: arial;
+  float: right;
+  position: relative;
+  left: 450px;
+  top: 43px;
+}
+

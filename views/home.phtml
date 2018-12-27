@@ -24,6 +24,18 @@ article {
   padding: 10px;
 }
 
+.article1 {
+width: 200px; 
+font-family: arial; 
+font-size: 16px; 
+border: 1px solid black; 
+text-align:center; color: red; 
+margin:20px; 
+position: relative;
+left: 5px;
+right: 1px;
+}
+
 .titel {
   height: 60px;
   background-color: darkbrown;
@@ -39,7 +51,8 @@ article {
 
 .button1 {
 
-  position: absolute;
+  position: relative;
+margin: 20px;
   color: black;
   font-size: 16px;
   font-family: arial;
@@ -50,6 +63,19 @@ article {
 
 .button1:hover {
     background-color: #e7e7e7;
+}
+
+.buttondiv {
+  width: 275px;
+  Height: 85px;
+  position: relative;
+  left: 22px;
+  top: 25px;
+}
+
+.logodiv {
+  position: relative;
+  left: 5px;
 }
 
 textfield {
@@ -68,6 +94,9 @@ textfield {
   width:450px;
   height: 540px;
   margin: 20px;
+  position: relative;
+  top: 75px;
+}
 }
 
 .description {
@@ -135,6 +164,10 @@ textfield {
   position: relative;
   line-height: 1.7;
 }
+
+.logodiv {
+  width: 275px;
+}
 </style>
 
 </head>
@@ -164,19 +197,32 @@ textfield {
 
 
 
-<div class="product" style="width: 275px; float:left;>
+<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
       <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-      <article style="width: 200px; font-family: arial; font-size: 16px; border: 1px solid black; text-align:center; color: red; margin:20px; ">Nieuw in ons assortiment!</article> 
+      <article class="article1">Nieuw in ons assortiment!</article> 
+        <div class="Logodiv">
         <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
-        <div class="description" style="margin:20px; width: 200px;background-color:rgb(241, 241, 241);">
-        Productomschrijving
-      </div> 
-        <div>
-            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+        </div>
+        <div class="buttondiv">    
+        <button type="submit" style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
         </div>
       </div>
     </div>
 
+
+<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
+      <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
+      <article class="article1">Nieuw in ons assortiment!</article> 
+        <div class="Logodiv">
+        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
+        </div>
+        <div class="buttondiv">    
+        <button type="submit" style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+        </div>
+      </div>
+    </div>
+
+    
 
 </div>
 </div>

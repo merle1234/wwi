@@ -1,0 +1,7 @@
+<?php
+
+use core\database;
+
+
+
+?>

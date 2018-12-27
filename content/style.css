@@ -6,9 +6,11 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color:DarkBlue;
   top: 0;
   width: 100%;
+  height: 100%;
+  color: white;
 }
 
 li {
@@ -18,18 +20,24 @@ li {
 li a {
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  text-align: justify;
+  font-family: Arial;
+  padding-top: 45px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  padding-left: 25px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: blue;
+  
 }
 
 .active {
   background-color: #4CAF50;
 }
+
 .footer {
   position: fixed;
   left: 0;
@@ -38,4 +46,40 @@ li a:hover:not(.active) {
   background-color: clear;
   color: white;
   text-align: center;
+}
+
+
+
+.search input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.titel {
+  height: 60px;
+  background-color: darkbrown;
+  text-align: center;
+  color: black;
+  font-family: Arial;
+}
+
+.searchbutton {
+  position: relative;
+  color: black;
+  font-family: arial;
+  text-align: center;
+
+}
+
+.searchbutton:hover {
+  border-radius: 5px;
+  
+}
+
+.search {
+  float: right; font-family: Arial; padding-top: 45px; padding-right: 130px; padding-left: 80px;
 }

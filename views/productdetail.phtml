@@ -1,7 +1,12 @@
-test
-<?php 
+<h2><?php echo $result["stockitemname"] ?></h2>
 
-$ID = $_GET['ID'];
+<div class="price">
 
-?>
+<table class="">
+    <tr><th>Supplier</th><td><?php echo $result["suppliername"] ; ?></td></tr>
+    <tr><th>Prijs</th><td>€ <?php echo $result["unitprice"] ; ?></td></tr>
+    <tr><th>Afbeelding</th><td><img src="data:image/png;base64,<?php echo base64_encode( $result["Photo"] ); ?>" /></td></tr>
+</table>
+</div>
+
 

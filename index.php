@@ -39,9 +39,16 @@ class layout extends siteParts
             $_GET['controller'] = 'content';
             $_GET['action'] = 'home';
         }
+        session_start();
+     
         $this->getLayout();
     }
 
+    public function closeSite() 
+    {
+        $this->getLayoutFooter();
+    }
+    
     private function getLayout()
     {
        // $this->getController();
@@ -57,12 +64,27 @@ class layout extends siteParts
 
     }
 
+    private function getLayoutFooter()
+    {
+        if(file_exists('./layouts/layout_footer.phtml'))
+        {
+            include('./layouts/layout_footer.phtml');
+        }else
+        {
+            throw new Exception('layout '.'layout_footer.phtml'.' was not found');
+        }
+
+    }
+
 }
+
 $site =  new layout();
 $site->runSite();
 try{
     $actions = new siteParts();
     $actions->getController();
+
+    $site->closeSite();
 
 }catch (Exception $e)
 {

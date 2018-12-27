@@ -25,13 +25,14 @@ class database
         $content = array();
                 
           while($row = $result->fetch_assoc()) {
+             
               $content[]=$row;
           };
          
         return $content;
-
-
     }
 
-
+    public function escape_parameter($param) {
+        return mysqli_real_escape_string($this->conn, $param);
+    }
 }

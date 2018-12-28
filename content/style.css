@@ -82,6 +82,7 @@ li a:hover:not(.active) {
   
 }
 
+<<<<<<< HEAD
 .products {
   width: 100%;
 }
@@ -94,3 +95,13 @@ li a:hover:not(.active) {
 .products .pager span {
   margin-right: 10px;
 }
+=======
+.search-container {
+  font-family: arial;
+  float: right;
+  position: relative;
+  left: 450px;
+  top: 43px;
+}
+
+>>>>>>> fb5ef191c47b0b72b97436ecf44f0ba847753d43

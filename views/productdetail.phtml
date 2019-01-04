@@ -1,12 +1,15 @@
-<h2><?php echo $result["stockitemname"] ?></h2>
-
+<div class ="titledetail">
+    <h2><?php echo $result["stockitemname"] ?></h2>
+</div>
 <div class="price">
 
-<table class="">
+<table class="price2">
+    <tr><th>Comment</th><td><?php echo $result["marketingcomments"] ; ?></td></tr>
     <tr><th>Supplier</th><td><?php echo $result["suppliername"] ; ?></td></tr>
     <tr><th>Prijs</th><td>€ <?php echo $result["unitprice"] ; ?></td></tr>
     <tr><th>Afbeelding</th><td><img src="data:image/png;base64,<?php echo base64_encode( $result["Photo"] ); ?>" /></td></tr>
     
 </table>
 </div>
-<div class="video-container"><iframe width="426" height="240" src="https://www.youtube.com/embed/j8xAeBOAC8U" frameborder="0" allowfullscreen></iframe></div>
+<div class="video-container">
+    <iframe width="426" height="240" src="https://www.youtube.com/embed/j8xAeBOAC8U" frameborder="0" allowfullscreen></iframe></div>

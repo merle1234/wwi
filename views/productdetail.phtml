@@ -15,7 +15,7 @@
 <tr><th></th>
     <tr><th>Beschrijving</th><td><?php echo $result["marketingcomments"] ; ?></td></tr>
     <tr><th>Leverancier</th><td><?php echo $result["suppliername"] ; ?></td></tr>
-    
+
     <tr><th>Prijs</th><td>€ <?php echo $result["unitprice"] ; ?> Incl. Btw</td></tr>
     <tr><th><form action="?controller=products&action=winkelmand" method="POST"><input type="hidden" name="product" value="<?php echo $product["stockitemid"] ; ?>"/>
     Aantal :<input type="number" name="amount" value="1" style="width:50px;border:1px solid"/><td><button type="submit">In winkelwagen</button></form></td></tr>
@@ -23,6 +23,6 @@
 </table>
 </div>
 <div class="video-container">
-    <iframe width="426" height="240" src="https://www.youtube.com/embed/j8xAeBOAC8U" frameborder="0" allowfullscreen></iframe></div>
+    <iframe width="426" height="240" src="<?php echo $result["videourl"] ; ?>" frameborder="0" allowfullscreen></iframe></div>
 
         

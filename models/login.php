@@ -2,19 +2,33 @@
 namespace models;
 use core\database;
 
-include_once(“model/login.php”);
-class Login {
-public function getlogin()
-{
-// here goes some hardcoded values to simulate the database
-if(isset($_REQUEST[‘username’]) && isset($_REQUEST[‘password’])){
-if($_REQUEST[‘username’]==’admin’ && $_REQUEST[‘password’]==’admin’){
-return ‘login’;
-}
-                        else{
-return ‘invalid user’;
-}
-}
-}
-}
+
+class login {
+
+    private $data;
+
+    function __constructor() {}
+    /*functions */
+    
+    function load($url){
+        include($url);
+    }
+
+    /*Get / Set DATA  */
+
+    function setData($name, $value){
+        $this->data[$name] = htmlentities($value, ENT_QUOTES);
+    }
+
+    function getData($name) {
+        if (isset($this->data[$name])) {
+            return $this->data[$name];
+            else 
+            {
+                return '';
+            }
+        }
+    }
+
+} 
 ?>

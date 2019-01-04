@@ -1,26 +1,22 @@
 <?php
 namespace models;
 use core\database;
+/*user_model_inc. */
 
-class Login_model{
-    function __construct($conn){
-        $this->conn = $conn;
+
+class UserModel {
+    private $username;
+
+    function UserModel($username) {
+        $this->username = $username;
     }
-    function check_user_and_pass(){
-        $select_user_pass_query = $this->conn->prepare("SELECT username, password FROM users WHERE username = :username, password = :password");
 
-        if($select_user_pass_query->execute(array(':username'=>$_GET["username"], ':password'=>$_GET["password"]))){
-            $details = $select_user_pass_query->fetch(PDO::FETCH_NUM);
-            if(!empty($details)){
-                return true;
-            }else{
-                Login_view::show_message("Wrong user or password");
-            }
-        }else{
-            Login_view::show_message("Error occured");
-        }
+    function get_username () {
+        return $this->username;
+    }
+
+    function set_username($username){
+        $this->username = $username;
     }
 }
-
-
 ?>

@@ -1,25 +1,25 @@
-<html>
-<body>
-
 <?php
-
-class Login_view{
-    static function show_login_form(){
-        echo 
-        "<form method=\"GET\" action=\"{$_SERVER["PHP_SELF"]}\">
-            Username: <input name=\"username\" type=\"text\"> </br>
-            Password: <input name=\"password\" type=\"password\"> </br>
-            <input name=\"login\" type=\"submit\" value=\"Login\">
-        </form>";
-    }
-
-    static function show_message($message){
-        echo $message;
-   }
-
-}
+session_start();
+if(isset($_SESSION['user'])) header("Location:main.php");
 
 ?>
+<html>
+<body>
+<h2>Welkom bij Login</h2>
+<?php
+if(@$_GET['err'] == 1) { ?>
+<div class="error-text">Login incorrect. Please try again</div>
+<?php } ?>
 
+<form action="loginindex.php" method="post">
+        <label for="e-mail"><b>E-mail:</b></label>
+            <input type="text" placeholder="uw e-mail" name="user" required>
+        
+            <label for="psw"><b>Wachtwoord:</b></label>
+            <input type="password" placeholder="uw wachtwoord" name="pass" required>
+                
+            <input type="submit" name="op" value="login" />
+            
+</form> 
 </body>
 </html>

@@ -1,46 +1,31 @@
 <?php
 use core\database;
-include("views/login.php");
 
-class UserController {
-    function UserController(){
-        //contructor
-    }
+include_once('models/login.php');
 
-    function create($username, $password)
+class Controller {
+public $model;
+
+public function __construct()
     {
-        //create user in db
+        $this->model = new Model();
+
     }
 
-    function login($username, $password)
-    {
-        if($his->authenticate($username, $password)) {
-            session_start();
-            //instantiate user model object
-            $user = new UserModel($username);
-            //set user object to session
-            $_SESSION['user'] = $user;
-            //we tell system that we authenticated
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
+public function invoke()
+{
 
-    static function authenticate ($username, $password) {
-        $authentic = false;
-        //check against db
-        if ($username == 'admin' && $password == 'admin') $authentic = true;
-        return $authentic;
-    }
-    function logout ()
-    {
-        //logout procedure
-        session_start();
-        session_destroy();
-    }
+$reslt = $this->model->getlogin();     // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
+if($reslt == ‘login’)
+{
+include ‘views/afterlogin.phtml’;
+}
+else
+{
+print("incorrect");
+}
 
+}
 }
 
 ?>

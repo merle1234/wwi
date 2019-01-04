@@ -3,8 +3,14 @@
 
 <body>
 <?php
-echo $reslt;
+if($_SESSION['auth'] = true)
+{
+?>
+already logged in
+<?php
 
+}else
+{
 ?>
 <form method="post" action="?controller=login&action=invoke">
     <input type="text" placeholer="email" name="Email" id="Email" value="">
@@ -12,6 +18,10 @@ echo $reslt;
         
     <input type="submit" value="inloggen" />
 </form>
+<?php
 
+
+}
+?>
 </body>
 </html>

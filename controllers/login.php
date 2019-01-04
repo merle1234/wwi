@@ -25,7 +25,7 @@ $reslt = $content->getlogin($mail, $password);     // it call the getlogin() fun
 //var_dump($reslt);
 if($reslt == 'login')
 {
-$_SESSION["auth"] = "true";
+$_SESSION["auth"] = 'true';
 
 include 'views/afterlogin.phtml';
 }

@@ -1,3 +1,5 @@
+<p style="float:right;">Product niet aanwezig? Laat een bericht achter!
+<a href="url" >Versturen &raquo;</a></p>
 <table class="products">
 <?php foreach ($result as $product) : ?>
     <tr class="product">
@@ -17,7 +19,6 @@
     </form>
     </td>
     </tr>
-
 <?php endforeach; ?>
 <tfoot>
       <tr class="pager"><td colspan="4"><?php for ($i = 0; $i < $total; $i++) {
@@ -31,9 +32,4 @@
         } else { echo "<a href='?controller=products&action=products&search=$search&page=$i'>$label</a>"; } } ?>
       </td></tr>
 </tfoot>
-</table>
-<table class="suggestions">
-<tr>Product niet aanwezig? Stuur een bericht!</tr><br>
-<?php echo '<textarea class="box">'.'</textarea>'; ?>
-<a href="#" class="send">Versturen &raquo;</a>
 </table>

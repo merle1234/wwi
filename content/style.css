@@ -111,4 +111,7 @@ li a:hover:not(.active) {
   width: 25%;
   height: 25%;
   }
-  
+  .price{
+    max-width: 500px;
+    margin: auto;
+  }

@@ -1,22 +1,22 @@
 <?php
-namespace models;
 use core\database;
-/*user_model_inc. */
 
+class Model {
 
-class UserModel {
-    private $username;
+public function getlogin()
+{
+// here goes some hardcoded values to simulate the database
+if(isset($_REQUEST[‘username’]) && isset($_REQUEST[‘password’])){
 
-    function UserModel($username) {
-        $this->username = $username;
-    }
-
-    function get_username () {
-        return $this->username;
-    }
-
-    function set_username($username){
-        $this->username = $username;
-    }
+if($_REQUEST[‘username’]==’admin’ && $_REQUEST[‘password’]==’admin’){
+return ‘login’;
 }
+                        else{
+return ‘invalid user’;
+}
+}
+}
+
+}
+
 ?>

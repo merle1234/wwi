@@ -115,3 +115,9 @@ li a:hover:not(.active) {
     max-width: 500px;
     margin: auto;
   }
+  .suggestions {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    
+  }

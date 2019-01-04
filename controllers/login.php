@@ -1,31 +1,39 @@
 <?php
 use core\database;
 
-include_once(“models/login.php”);
+class Login {
 
-class Controller {
-public $model;
-
-public function __construct()
-    {
-        $this->model = new Model();
-
-    }
-
+public function submit()
+{
+    $test = $_POST['submit'];
+    var_dump($test);
+    
+}
 public function invoke()
 {
-
-$reslt = $this->model->getlogin();     // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
-if($reslt == ‘login’)
+    if(isset($_POST['Email']) && isset($_POST['Password']))
+    {
+        $mail = $_POST['Email'];
+        $password = $_POST['Password'];
+    }
+    else{
+        $mail = null;
+        $password = null;
+    };
+$content = new \models\login();
+$reslt = $content->getlogin($mail, $password);     // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
+//var_dump($reslt);
+if($reslt == 'login')
 {
-include ‘views/afterlogin.phtml’;
+include 'views/afterlogin.phtml';
 }
 else
 {
-include ‘views/login.phtml’;
+include 'views/login.phtml';
 }
 
 }
+
 }
 
 ?>

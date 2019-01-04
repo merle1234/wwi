@@ -1,18 +1,18 @@
 <?php
+namespace models;
 use core\database;
 
-class Model {
+class login {
 
-public function getlogin()
+public function getlogin($mail, $password)
 {
 // here goes some hardcoded values to simulate the database
-if(isset($_REQUEST[‘username’]) && isset($_REQUEST[‘password’])){
-
-if($_REQUEST[‘username’]==’admin’ && $_REQUEST[‘password’]==’admin’){
-return ‘login’;
+if(isset($mail) && isset($password)){
+if($mail=='admin' && $password=='admin'){
+return 'login';
 }
                         else{
-return ‘invalid user’;
+return 'invalid user';
 }
 }
 }

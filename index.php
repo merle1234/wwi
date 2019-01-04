@@ -39,6 +39,7 @@ class layout extends siteParts
             $_GET['controller'] = 'content';
             $_GET['action'] = 'home';
         }
+        
         session_start();
      
         $this->getLayout();

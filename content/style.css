@@ -106,12 +106,13 @@ li a:hover:not(.active) {
   .video-container object,
   .video-container embed {
   position: absolute;
-  top: -7%;
+  top: -27%;
   left: 70%;
   width: 25%;
   height: 25%;
 
   }
+
 .price{
   max-width: 500px;
   margin: auto;

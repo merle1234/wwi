@@ -18,6 +18,12 @@ class Productdetail
         return $result[0];
     }
 
+    public function stockquantity(){
+        
+    }
+    
 }
+
+
 
 ?>

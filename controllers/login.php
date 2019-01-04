@@ -22,7 +22,7 @@ include ‘views/afterlogin.phtml’;
 }
 else
 {
-include ‘views/login.phtml’;
+print("incorrect");
 }
 
 }

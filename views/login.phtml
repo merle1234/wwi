@@ -1,10 +1,12 @@
 <html>
 <body>
+<?php
+echo $this->getData('name');
+
+?>
 
 <h2>Login</h2>
-<?php 
-echo $reslt;
-?>
+
 <form action="?controller=login&action=login" method="post">
 <label for="e-mail"><b>E-mail:</b></label>
     <input type="text" placeholder="uw e-mail" name="e-mail" required>

@@ -106,8 +106,8 @@ li a:hover:not(.active) {
   .video-container object,
   .video-container embed {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: -27%;
+  left: 70%;
   width: 25%;
   height: 25%;
 

@@ -113,7 +113,7 @@ li a:hover:not(.active) {
 
   }
 
-.price{
+.productspec{
   max-width: 500px;
   margin: auto;
 }
@@ -121,6 +121,6 @@ li a:hover:not(.active) {
   text-align: center;
 }
   
-.price2 {
+.productspec2 {
   text-align: left;
 }

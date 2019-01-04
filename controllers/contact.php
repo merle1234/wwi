@@ -1,8 +1,10 @@
 <?php
-
-use core\database;
-include ('./models/contact.php');
-
-
-class contact{}
+  class contact
+  {
+      public function contactformulier();
+  {
+    
+    require_once('views/contact.phtml'); 
+  }
+}
     ?>

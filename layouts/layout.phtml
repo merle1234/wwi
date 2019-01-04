@@ -17,9 +17,19 @@
                 <li><img style="height:110px; width:170px;" class="logo" src="https://media.viva.nl/m/athrgyvwgh5t_featured_image_article.jpg/chocola.jpg"></li>
                 <li><A href="?controller=content&action=home">Home</A></li>
                 <li><a href="?controller=products&action=products">Producten</a></li>
-                
+                <?php if(isset($_SESSION['auth']) && $_SESSION['auth'] == "true"){
+                    ?>
+                <li><a href="?controller=login&action=logoff">Uitloggen</a></li>
+
+                    <?php
+                }else{
+                    ?>
+                    <li><a href="?controller=login&action=invoke">Inloggen</a></li>
+
+                    <?php
+
+                } ?>
                 <li><a href="?controller=content&action=winkelmand">Winkelmand</a></li>
-                <li><a href="?controller=content&action=login">Inloggen</a></li>
                 <li><a href="?controller=registratie&action=registratie">Registreren</a></li>
                 
                 <form action="?controller=products&action=products" method="POST" style="color:white; float: right; font-family: Arial; padding-top: 45px; padding-right: 130px; padding-left: 80px;">Zoek product <input type="text" name="search" class="search"/><input type="submit" value="Zoeken"/>

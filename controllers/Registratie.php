@@ -16,7 +16,7 @@ class Registratie{
         
         $content = new \models\registratie();
 
-        $store - $content->StoreData($email,$password);
+        $store = $content->StoreData($email,$password);
 
     }
 }

@@ -7,6 +7,7 @@ class Registratie {
 public function StoreData($email)
     {
         var_dump($email);
+        var_dump($password);
     }
 
 }

@@ -12,6 +12,7 @@ class Registratie{
     public function StoreData()
     {
         $email = $_POST['Email'];
+        $password = password_hash("$_POST['password']", PASSWORD_BCRYPT, $options);
         
         $content = new \models\registratie();
 

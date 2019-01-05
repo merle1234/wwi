@@ -31,6 +31,15 @@ class database
          
         return $content;
     }
+    public function Insert($query)
+    {
+        if (mysqli_query($this->conn,$query)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $query . "<br>" . mysqli_error($this->conn);
+        }
+        return true;
+    }
 
     public function escape_parameter($param) {
         return mysqli_real_escape_string($this->conn, $param);

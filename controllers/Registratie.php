@@ -4,9 +4,9 @@ use core\database;
 
 class Registratie{
 
-    publif function registratie()
+    public function registratie()
     {
-        require_once('/views/registratie.phtml')
+        require_once('views/registratie.phtml');
     }
 }
 ?>

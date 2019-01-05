@@ -34,9 +34,9 @@ class database
     public function Insert($query)
     {
         if (mysqli_query($this->conn,$query)) {
-            echo "New record created successfully";
+            echo "Bedankt! Uw account is succevol aangemaakt.";
         } else {
-            echo "Dit email bestaat al";
+            echo "Deze E-mail is reeds in gebruik.";
         }
         return true;
     }

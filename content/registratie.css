@@ -4,3 +4,6 @@ h2{
 div{
  text-align: center
 };
+body{
+  background-image: url(./content/reg.jpg);
+}

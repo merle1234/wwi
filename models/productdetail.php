@@ -11,7 +11,7 @@ class Productdetail
        
         $productId = $conn->escape_parameter($id);
  
-        $sql = "SELECT si.videourl, si.stockitemid, si.stockitemname, si.unitprice, si.Photo, s.QuantityOnHand, si.marketingcomments FROM stockitems si join stockitemholdings s on s.stockitemid = si.stockitemid where si.stockitemid = '$productId'";
+        $sql = "SELECT si.videourl, si.stockitemid, si.stockitemname, si.unitprice, si.Photo, si.Photo2, si.Photo3, s.QuantityOnHand, si.marketingcomments FROM stockitems si join stockitemholdings s on s.stockitemid = si.stockitemid where si.stockitemid = '$productId'";
         $result = $conn->query($sql);
        
         //Eerste positie uit de array.

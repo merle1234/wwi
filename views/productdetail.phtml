@@ -1,3 +1,6 @@
+<head>
+<LINK href="./content/style.css" rel="stylesheet" type="text/css">
+</head>
 <div class ="titledetail">
     <h2><?php echo $result["stockitemname"] ?></h2>
 </div>
@@ -5,11 +8,35 @@
 
 <table class="productspec2">
     <tr><th><?php if (strlen($result["Photo"]) > 0) { ?>
-                <img src="data:image/png;base64,<?php echo base64_encode( $product["Photo"] ); ?>" />
+                <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo"] ); ?>" />
                 <?php } else { ?>
                 <img src="content/geen_afbeelding.png"/>
                 <?php } ?></th><td></td></tr> 
-<tr><th></th>
+
+<tr><div class="gallery">
+  <a target="_blank" href="http://www.w3schools.com/css/img_5terre.jpg">
+  <?php if (strlen($result["Photo2"]) > 0) { ?>
+                <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo2"] ); ?>" />
+                <?php } else { ?>
+                <img src="content/geen_afbeelding.png"/>
+                <?php } ?>  
+    
+  </a>
+
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
+  <?php if (strlen($result["Photo3"]) > 0) { ?>
+                <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo3"] ); ?>" />
+                <?php } else { ?>
+                <img src="content/geen_afbeelding.png"/>
+                <?php } ?>  
+  </a>
+</div>
+
+
+</th>
     <tr><th>Productspecificaties :</th>
 <tr><th></th>
 <tr><th></th>
@@ -34,5 +61,5 @@ if ($result["QuantityOnHand"] > "999") {
 </div>
 <div class="video-container">
     <iframe width="426" height="240" src="<?php echo $result["videourl"] ; ?>" frameborder="0" allowfullscreen></iframe></div>
+</div>
 
-        

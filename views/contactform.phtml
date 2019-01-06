@@ -7,9 +7,12 @@
         <main>
           <h1>Hartelijk bedankt voor uw bericht. Uw feedback is erg belangrijk voor ons!</h1><br>
           <p>Klik op deze knop om terug te gaan naar het productoverzicht.</p>
-          <form action="http://localhost/wwi/?controller=products&action=products">
-    <input type="submit" value="Terug naar het productoverzicht" />
-</form>
+<button onclick="goBack()">Terug naar het productoverzicht</button>
 
+<script>
+function goBack() {
+  window.history.go(-2);
+}
+</script>
 
 </html>

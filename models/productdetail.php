@@ -21,12 +21,6 @@ class Productdetail
         
 
     }
-
-
-    public function stockquantity(){
-        
-    }
-    
 }
 
 

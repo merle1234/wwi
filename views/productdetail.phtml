@@ -13,27 +13,38 @@
                 <img src="content/geen_afbeelding.png"/>
                 <?php } ?></th><td></td></tr> 
 
-<tr><div class="gallery">
-  <a target="_blank" href="http://www.w3schools.com/css/img_5terre.jpg">
-  <?php if (strlen($result["Photo2"]) > 0) { ?>
+<tr><th><a class="lightbox" href="#photo2">
+<?php if (strlen($result["Photo3"]) > 0) { ?>
                 <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo2"] ); ?>" />
                 <?php } else { ?>
                 <img src="content/geen_afbeelding.png"/>
                 <?php } ?>  
-    
-  </a>
-
+</a> 
+<div class="lightbox-target" id="photo2">
+<?php if (strlen($result["Photo3"]) > 0) { ?>
+                <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo2"] ); ?>" />
+                <?php } else { ?>
+                <img src="content/geen_afbeelding.png"/>
+                <?php } ?>  
+   <a class="lightbox-close" href="#"></a>
 </div>
-
-<div class="gallery">
-  <a target="_blank" href="https://www.w3schools.com/css/img_forest.jpg">
-  <?php if (strlen($result["Photo3"]) > 0) { ?>
+                </th>
+<td><a class="lightbox" href="#photo3">
+<?php if (strlen($result["Photo3"]) > 0) { ?>
                 <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo3"] ); ?>" />
                 <?php } else { ?>
                 <img src="content/geen_afbeelding.png"/>
                 <?php } ?>  
-  </a>
+</a> 
+<div class="lightbox-target" id="photo3">
+<?php if (strlen($result["Photo3"]) > 0) { ?>
+                <img src="data:image/png;base64,<?php echo base64_encode( $result["Photo3"] ); ?>" />
+                <?php } else { ?>
+                <img src="content/geen_afbeelding.png"/>
+                <?php } ?>  
+   <a class="lightbox-close" href="#"></a>
 </div>
+                </td></tr>
 
 
 </th>
@@ -62,4 +73,5 @@ if ($result["QuantityOnHand"] > "999") {
 <div class="video-container">
     <iframe width="426" height="240" src="<?php echo $result["videourl"] ; ?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
+
 

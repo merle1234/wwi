@@ -93,11 +93,15 @@ textfield {
 .product {
   width:450px;
   height: 540px;
-  margin: 20px;
+  margin: 30px;
   position: relative;
-  top: 75px;
+  top: 125px;
+  position: relative; 
+  top: 50px;
+  right: 20px;
+  font-family: arial;
 }
-}
+
 
 .description {
   height:38px; 
@@ -168,14 +172,21 @@ textfield {
 .logodiv {
   width: 275px;
 }
+
+.welkom {
+  position: relative;
+  top: 100px;
+  font-family: arial;
+}
+
 </style>
 
 </head>
 
 <body>
 <header style="height: 100%;">
-<div style="width: 700px;"></div>
-<div class="titel">Homepage</div>
+  <div style="width: 700px;"></div>
+    <div class="titel">Homepage</div>
       <div class="titel2" style="float: right;">Beoordeel onze webshop! 
       <div class="rank" style="float:right;"> 
       <div class="rate">
@@ -195,41 +206,51 @@ textfield {
   </div>
 </header>
 
+<div style="position: relative; top: 20px; height: 50px; width: 400px; font-family:arial; left: 160px;">  <h2>Nieuw in ons assortiment!</h2>
+</div>
+
+<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
+    <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
+        <article class="article1">Productomschrijving</article> 
+      <div class="Logodiv">
+        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
+      </div>
+      <div class="buttondiv">    
+          <form action="?controller=productdetail&action=productdetail&ID=89" method="POST">
+            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+        </form>        
+      </div>
+    </div>
+  </div>
 
 
 <div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
-      <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-      <article class="article1">Nieuw in ons assortiment!</article> 
+    <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
+      <article class="article1">Productomschrijving</article> 
         <div class="Logodiv">
         <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
         </div>
         <div class="buttondiv">    
-        <form action="views/products.phtml">
+        <form action="?controller=productdetail&action=productdetail&ID=97" method="POST">
                 <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>        
+        </form>      
         </div>
       </div>
     </div>
 
-
-<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
-      <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-      <article class="article1">Nieuw in ons assortiment!</article> 
-        <div class="Logodiv">
-        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
-        </div>
-        <div class="buttondiv">    
-        <form action="views/products.phtml">
-                <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>        
-        </div>
-      </div>
+    <div class="welkom">
+        <b>Welkom bij Wide World Importers!...........................</b>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      
     </div>
+
+    
 
     
 
 </div>
 </div>
+
 
 
 

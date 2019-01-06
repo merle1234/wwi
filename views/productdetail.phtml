@@ -10,17 +10,27 @@
                 <img src="content/geen_afbeelding.png"/>
                 <?php } ?></th><td></td></tr> 
 <tr><th></th>
-    <tr><th>Productspecificaties2 :</th>
+    <tr><th>Productspecificaties :</th>
 <tr><th></th>
 <tr><th></th>
     <tr><th>Beschrijving</th><td><?php echo $result["marketingcomments"] ; ?></td></tr>
-    <tr><th>Leverancier</th><td><?php echo $result["suppliername"] ; ?></td></tr>
-
+    
+    <tr><th>Voorraad</th><td><?php
+if ($result["QuantityOnHand"] > "999") {
+    echo 'Meer dan 1000! <img src="Content/ggroen-vinkje.png" alt="vinkje"> ';
+} elseif ($result["QuantityOnHand"] > "0") {
+    echo 'Minder dan 1000! <img src="Content/groen-vinkje.png" alt="vinkje">';
+} else {
+    echo 'Product uitverkocht! <img src="Content/rood-kruis.png" alt="kruis">';
+}
+?></td></tr>
     <tr><th>Prijs</th><td>€ <?php echo $result["unitprice"] ; ?> Incl. Btw</td></tr>
     <tr><th><form action="?controller=products&action=winkelmand" method="POST"><input type="hidden" name="product" value="<?php echo $product["stockitemid"] ; ?>"/>
-    Aantal :<input type="number" name="amount" value="1" style="width:50px;border:1px solid"/><td><button type="submit">In winkelwagen</button></form></td></tr>
+    <tr><th>Aantal :<input type="number" name="amount" value="1" style="width:50px;border:1px solid"/><td><div class="button"><button type="submit">In winkelwagen</button></form></div></td></tr>
     
+    <tr><th><div class="button"><input type="button" value="Vorige pagina" onClick="history.back()"></div></th></tr>
 </table>
+
 </div>
 <div class="video-container">
     <iframe width="426" height="240" src="<?php echo $result["videourl"] ; ?>" frameborder="0" allowfullscreen></iframe></div>

@@ -1,7 +1,53 @@
-<p style="float:right;">Product niet aanwezig? Laat een bericht achter!
-<a href="?controller=contact&action=contactformulier" >Versturen &raquo;</a></p>
+<style>
+/* Style the header */
+header {
+  background-color: #666;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+.titel {
+  height: 60px;
+  background-color: darkbrown;
+  color: black;
+  font-family: Arial;
+  line-height: 2;
+}
+
+.reactie {
+  height: 40px;
+  width: 460px;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+  float:right; 
+  Font-family:arial; 
+  border: 1px solid;
+  padding-top: 20px;
+}
+
+</style>
+
+<header style="height: 100%;">
+  <div style="width: 700px;"></div>
+    <div class="titel">Product overzicht</div>
+</header>
+
+<div class="reactie"> <b>Product niet aanwezig? Laat een bericht achter!</b>
+  <a href="?controller=contact&action=contactformulier" >Versturen &raquo;</a>
+</div>
+
 <table class="products">
-<?php foreach ($result as $product) : ?>
+  <?php foreach ($result as $product) : ?>
     <tr class="product">
     <td>
     <?php if (strlen($product["Photo"]) > 0) { ?>

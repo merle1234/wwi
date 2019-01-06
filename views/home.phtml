@@ -29,7 +29,7 @@ width: 200px;
 font-family: arial; 
 font-size: 16px; 
 border: 1px solid black; 
-text-align:center; color: red; 
+text-align:center;  
 margin:20px; 
 position: relative;
 left: 5px;
@@ -209,24 +209,11 @@ textfield {
 <div style="position: relative; top: 20px; height: 50px; width: 400px; font-family:arial; left: 160px;">  <h2>Nieuw in ons assortiment!</h2>
 </div>
 
+
+<?php foreach ($queryresult as $product )  : ?>
 <div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
     <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-        <article class="article1">Productomschrijving</article> 
-      <div class="Logodiv">
-        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
-      </div>
-      <div class="buttondiv">    
-          <form action="?controller=productdetail&action=productdetail&ID=89" method="POST">
-            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>        
-      </div>
-    </div>
-  </div>
-
-
-<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
-    <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-      <article class="article1">Productomschrijving</article> 
+      <article class="article1"><?php  echo $product["stockitemname"];?> </article> 
         <div class="Logodiv">
         <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
         </div>
@@ -237,6 +224,8 @@ textfield {
         </div>
       </div>
     </div>
+  <?php endforeach; ?>
+
 
     <div class="welkom">
         <b>Welkom bij Wide World Importers!...........................</b>

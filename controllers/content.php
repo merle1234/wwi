@@ -8,8 +8,12 @@ class content
 {
     public function Home()
     {
+        
+        
         $content = new \models\content();
-       // $content->getAll();
+        $queryresult = $content->getData();
+       
+        
         require_once('views/home.phtml');       
     }
 

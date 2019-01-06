@@ -1,15 +1,18 @@
 <?php
 namespace models;
 use core\database;
-class content
+class content extends products
 {
 
-    public function getAll()
+    public function getData()
     {
 
-        $connection = new database();
+        $conn = new database();
 
-        $query = $connection->query("SELECT * FROM artikelen");
-        return $query;
+        $query = "SELECT stockitemID, stockitemname, Photo FROM stockitems ORDER BY stockitemname ASC";
+        $queryresult = $conn->query($query);
+
+        return $queryresult;
     }
+
 }

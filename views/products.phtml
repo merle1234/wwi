@@ -1,20 +1,17 @@
+<LINK href="./content/products.css" rel="stylesheet" type="text/css">
 <style>
 /* Style the header */
 header {
   background-color: #666;
-
   text-align: center;
   font-size: 30px;
   color: white;
 }
-
 /* Container for flexboxes */
-section {
+section { 
   display: -webkit-flex;
   display: flex;
 }
-
-
 .titel {
   height: 60px;
   background-color: darkbrown;
@@ -22,7 +19,6 @@ section {
   font-family: Arial;
   line-height: 2;
 }
-
 .reactie {
   height: 40px;
   width: 460px;
@@ -34,7 +30,6 @@ section {
   border: 1px solid;
   padding-top: 20px;
 }
-
 </style>
 
 <header style="height: 100%;">
@@ -72,7 +67,6 @@ section {
         $search = "";
         if (isset($_POST["search"])) $search = $_POST["search"];
         if (isset($_GET["search"])) $search = $_GET["search"];
-
         if ((!isset($_GET["page"]) && $i == 0) || (isset($_GET["page"]) && $i == $_GET["page"])) {
           echo "<span>$label</span>";
         } else { echo "<a href='?controller=products&action=products&search=$search&page=$i'>$label</a>"; } } ?>

@@ -4,23 +4,23 @@
   <LINK href="./content/registratie.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div class="header">
+  <div class="header" style="font-family:arial;">
   	<h2>Registreer</h2>
   </div>
 	
   <form method="post" action="?controller=registratie&action=StoreData">
-  	<div class="input-group">
-  	  <label>E-mail:</label>
+  	<div class="input-group" style="font-family:arial; position:relative; right:24px;">
+  	  <label><b>E-mail:</b></label>
   	  <input type="email" name="Email" placeholder="E-mail" require>
   	</div>
-  	<div class="input-group">
-  	  <label>Wachtwoord:</label>
+  	<div class="input-group" style="font-family:arial; position:relative; right:48px;">
+  	  <label><b>Wachtwoord:</b></label>
   	  <input type="password" name="password" placeholder="Wachtwoord" require>
   	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="registreeruser">Registreer!</button>
+  	<div class="input-group" style="font-family:arial; ">
+  	  <button style="font-family:arial;" type="submit" class="btn" name="registreeruser">Registreren</button>
   	</div>
-  	<p>
+  	<p style="font-family:arial; position: relative; left: 43%;">
   		Al een account? <a href="?controller=login&action=invoke">Log hier in!</a>
   	</p>
   </form>

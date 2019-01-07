@@ -210,17 +210,17 @@ textfield {
 </div>
 
 
-<?php foreach ($queryresult as $product )  : ?>
-<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
+  <?php foreach(array_slice($queryresult, 0, 2) as $product ): ?>
+    <div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;">
     <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
       <article class="article1"><?php  echo $product["stockitemname"];?> </article> 
         <div class="Logodiv">
         <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
         </div>
         <div class="buttondiv">    
-        <form action="?controller=productdetail&action=productdetail&ID=97" method="POST">
-                <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>      
+         <form action="?controller=productdetail&action=productdetail&ID=97" method="POST">
+            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+          </form>      
         </div>
       </div>
     </div>
@@ -228,16 +228,12 @@ textfield {
 
 
     <div class="welkom">
-        <b>Welkom bij Wide World Importers!...........................</b>
+      <form>
+        <b>Welkom op de webshop Wide World Importers!</b>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-      
+</form>
     </div>
-
-    
-
-    
-
-</div>
+  </div>
 </div>
 
 

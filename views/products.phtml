@@ -45,7 +45,7 @@ section {
 
 <table class="products">
   <?php foreach ($result as $product) : ?>
-    <tr class="product">
+    <tr class="product" style="font-family:arial;">
     <td>
     <?php if (strlen($product["Photo"]) > 0) { ?>
     <img src="data:image/png;base64,<?php echo base64_encode( $product["Photo"] ); ?>" />

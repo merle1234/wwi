@@ -4,13 +4,16 @@ use core\database;
 
 class Registratie {
 
-public function StoreData($email,$password)
-    {       
-        $connection = new database();       
-        $query = $connection->insert("INSERT INTO account(Password, EmailAddress)
-        VALUES ('$password' , ' $email' )");
+public function StoreData($email,$password,$postcode,$adres,$stad,$naam,$tel)
+    {
+        
+        $connection = new database();
+        $nawquery = $connection->insert("INSERT INTO users(FullName, AdressLine, PostalCode, PhoneNumber, City)
+        VALUES ('$naam' , ' $email' , '$adres' , '$postcode' , '$tel' , '$stad' )");
+        
+        $accountquery = $connection->insert("INSERT INTO account(UserId, Password, EmailAddress)
+        VALUES ('$nawquery' , '$password' , ' $email' )");
        
-       var_dump($query);
     }
 
 }

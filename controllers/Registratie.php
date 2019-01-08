@@ -21,7 +21,7 @@ class Registratie{
 
         $content = new \models\registratie();
 
-        $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad,$email);
+        $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad, $tel);
 
     }
 }

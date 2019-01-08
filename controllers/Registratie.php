@@ -17,7 +17,7 @@ class Registratie{
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];
         $stad = $_POST['stad'];
-        $email = $_POST['telefoon'];
+        $tel = $_POST['telefoon'];
 
         $content = new \models\registratie();
 

@@ -10,6 +10,7 @@ class content
         $connection = new database();
 
         $query = $connection->query("SELECT * FROM artikelen");
+        
         return $query;
     }
 }

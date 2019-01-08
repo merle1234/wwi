@@ -38,7 +38,7 @@ class database
         } else {
             echo "Deze E-mail is reeds in gebruik.";
         }
-        return true;
+        return mysqli_insert_id($this->conn);
     }
     public function escape_parameter($param) {
         return mysqli_real_escape_string($this->conn, $param);

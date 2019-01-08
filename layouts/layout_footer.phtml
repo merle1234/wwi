@@ -1,6 +1,6 @@
 </div>
 
-<div style="background: black" class="footer">
+<div  class="footer" style="background: darkblue; font-family:arial;">
     Items winkelmand
 <?php if(isset($_SESSION['winkelmand'])) echo(sizeof($_SESSION['winkelmand'])); else echo("0"); ?>
 <form action="?controller=products&action=winkelmand_legen" method="POST"><input type="submit" value="Legen"/></form>

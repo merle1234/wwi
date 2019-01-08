@@ -12,11 +12,19 @@ already logged in
 }else
 {
 ?>
+
+<div class="header" style="font-family:arial;">
+  	<h2>Login</h2>
+  </div>
+
 <form method="post" action="?controller=login&action=invoke">
     <input type="text" placeholer="email" name="Email" id="Email" value="">
     <input type="text" name="Password" id="Password" value="">
         
     <input type="submit" value="inloggen" />
+    <p style="font-family:arial; position: relative; left: 43%;">
+  		Nog geen account? <a href="?controller=registratie&action=registratie">Registreer je hier!</a>
+  	</p>
 </form>
 <?php
 

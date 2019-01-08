@@ -1,6 +1,19 @@
 <?php
 use core\database;
 
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
 class Login {
 
 public function submit()
@@ -39,7 +52,12 @@ include 'views/login.phtml';
 }
 
 public function logout(){
-    dvsfsaf
+session_start();
+if(session_destroy()) // Destroying All Sessions
+{
+header("Location: index.php"); // Redirecting To Home Page
+}
+
 }
 
 ?>

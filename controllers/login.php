@@ -38,8 +38,7 @@ include 'views/login.phtml';
 
 }
 
-public function logoff(){
-    if(isset($_GET['logoff']))
+if(isset($_GET['logoff']))
 {
 	$_SESSION = array();
 	session_destroy();
@@ -47,6 +46,6 @@ public function logoff(){
 header("Location: index.php");
 exit;
 }
-}
+
 
 ?>

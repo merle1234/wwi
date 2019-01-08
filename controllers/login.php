@@ -36,14 +36,16 @@ include 'views/login.phtml';
 
 }
 
-}
-
-
-
 function logoff (){
-    $_SESSION["auth"] = 'true';
+    $_SESSION["auth"] = 'false';
 
 }
+
+}
+
+
+
+
 
 
 ?>

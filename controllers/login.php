@@ -1,19 +1,6 @@
 <?php
 use core\database;
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-
 class Login {
 
 public function submit()
@@ -51,8 +38,15 @@ include 'views/login.phtml';
 
 }
 
+public function logoff(){
+    if(isset($_GET['logoff']))
+{
+	$_SESSION = array();
+	session_destroy();
 
-
+header("Location: index.php");
+exit;
+}
 }
 
 ?>

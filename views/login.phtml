@@ -1,7 +1,7 @@
 <html>
 <head></head>
 
-<body>
+<body style="background-color:ADD8E6;">
 <?php
 if(isset($_SESSION['auth']) && $_SESSION['auth'] == "true")
 {
@@ -12,17 +12,23 @@ already logged in
 }else
 {
 ?>
-<div class="loginpage">
+<div class="loginpage" style="text-align:center;">
 <div class="header" style="font-family:arial;">
   	<h2>Login</h2>
   </div>
 
 <form method="post" action="?controller=login&action=invoke">
+<label><b>E-mail:</b></label>
+<br>
     <input type="text" placeholer="email" name="Email" id="Email" value="">
+<br>
+<label><b>E-mail:</b></label>
+<br>
     <input type="text" name="Password" id="Password" value="">
-        
+<br>
     <input type="submit" value="inloggen" />
-    <p style="font-family:arial; position: relative; left: 43%;">
+<br>
+    <p style="font-family:arial;">
   		Nog geen account? <a href="?controller=registratie&action=registratie">Registreer je hier!</a>
   	</p>
 </form>

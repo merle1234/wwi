@@ -28,6 +28,7 @@ class database
              
               $content[]=$row;
           };
+        
          
         return $content;
     }
@@ -42,5 +43,27 @@ class database
     }
     public function escape_parameter($param) {
         return mysqli_real_escape_string($this->conn, $param);
+    }
+
+    public function login($query)
+    {
+        $result = mysqli_query($this->conn,$query);
+        $content = array();
+                
+          while($row = $result->fetch_assoc()) {
+             
+              $content[]=$row;
+          };
+        
+        $status = false;
+       
+        if(count($content) == 1 )
+        {
+            $status = true;
+        }
+        
+
+        var_dump($status);
+        return $status;
     }
 }

@@ -12,7 +12,7 @@ public function StoreData($email,$password,$naam,$adres,$postcode,$stad,$tel)
         VALUES ('$naam' , '$adres' , '$postcode' , '$tel' , '$stad' )");
         
         $accountquery = $connection->insert("INSERT INTO account(UserId, Password, EmailAddress)
-        VALUES ('$nawquery' , '$password' , ' $email' )");
+        VALUES ('$nawquery' , '$password' , '$email' )");
        
     }
 

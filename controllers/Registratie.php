@@ -13,10 +13,15 @@ class Registratie{
     {
         $email = $_POST['Email'];
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        
+        $naam = $_POST['naam'];
+        $adres = $_POST['adres'];
+        $postcode = $_POST['postcode'];
+        $stad = $_POST['stad'];
+        $email = $_POST['telefoon'];
+
         $content = new \models\registratie();
 
-        $store = $content->StoreData($email,$password);
+        $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad,$email);
 
     }
 }

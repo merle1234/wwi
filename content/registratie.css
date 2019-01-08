@@ -8,7 +8,7 @@ h2{
 div{
  text-align: center
 }
-input[type=email],input[type=password] {
+input[type=email],input[type=password],input[type=text],input[type=tel] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;

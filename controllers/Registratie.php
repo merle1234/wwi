@@ -16,12 +16,11 @@ class Registratie{
         $naam = $_POST['naam'];
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];
-        $stad = $_POST['stad'];
         $tel = $_POST['telefoon'];
-
+        $stad = $_POST['stad'];
         $content = new \models\registratie();
 
-        $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad,$email);
+        $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$tel,$stad);
 
     }
 }

@@ -17,7 +17,7 @@ class Products
         }
        
         $sql = "SELECT stockitemid, stockitemname,unitprice,Photo FROM stockitems $search_sql ORDER BY stockitemname ASC LIMIT $from, $this->pagesize";
-        $result = $conn->query($sql);
+        $result = $conn->query ($sql);
 
         return $result;
     }

@@ -29,7 +29,7 @@ width: 200px;
 font-family: arial; 
 font-size: 16px; 
 border: 1px solid black; 
-text-align:center; color: red; 
+text-align:center;  
 margin:20px; 
 position: relative;
 left: 5px;
@@ -175,8 +175,11 @@ textfield {
 
 .welkom {
   position: relative;
+  float: right;
+  right: 50px;
   top: 100px;
   font-family: arial;
+  width: 600px;
 }
 
 </style>
@@ -205,53 +208,42 @@ textfield {
     </div>
   </div>
 </header>
-
+<div style="height: 1200px;">
 <div style="position: relative; top: 20px; height: 50px; width: 400px; font-family:arial; left: 160px;">  <h2>Nieuw in ons assortiment!</h2>
 </div>
 
-<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
-    <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-        <article class="article1">Productomschrijving</article> 
-      <div class="Logodiv">
-        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
-      </div>
-      <div class="buttondiv">    
-          <form action="?controller=productdetail&action=productdetail&ID=89" method="POST">
-            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>        
-      </div>
-    </div>
-  </div>
 
-
-<div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;>
+  <?php foreach(array_slice($queryresult, 0, 2) as $product ): ?>
+    <div class="product" style="width: 275px; height: 340px; float:left; border: 2px solid;">
     <div class="imagebox" style="witdh: 100px; height: 300px; background-color:white;">
-      <article class="article1">Productomschrijving</article> 
+      <article class="article1"><?php  echo $product["stockitemname"];?> </article> 
         <div class="Logodiv">
-        <img style="width:200px;" class="logo" src="https://thumbs.dreamstime.com/t/stukken-van-chocoladereep-met-noten-16659458.jpg">
+        <?php if (strlen($product["Photo"]) > 0) { ?>
+                <img src="data:image/png;base64,<?php echo base64_encode( $product["Photo"] ); ?>" />
+                <?php } else { ?>
+                <img src="content/Geen_afbeelding1.png" style="position: relative; left: 35px;"/>
+                <?php } ?>  
         </div>
         <div class="buttondiv">    
-        <form action="?controller=productdetail&action=productdetail&ID=97" method="POST">
-                <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
-        </form>      
+         <form action="?controller=productdetail&action=productdetail&ID=97" method="POST">
+            <button style="margin: 20px; width: 180px; height: 45px;"class="button1">Klik om te bekijken</button>
+          </form>      
         </div>
       </div>
     </div>
+  <?php endforeach; ?>
+
 
     <div class="welkom">
-        <b>Welkom bij Wide World Importers!...........................</b>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-      
+      <form>
+        <h2><b>Welkom op de webshop van Wide World Importers!</b></h2></br>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+</form>
     </div>
-
-    
-
-    
-
-</div>
+  </div>
 </div>
 
-
+</div>
 
 
 </body>

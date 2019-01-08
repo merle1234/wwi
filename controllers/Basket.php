@@ -9,6 +9,10 @@ class Basket
     {
         if (isset($_SESSION['winkelmand'])) {
             $winkelmand = $_SESSION['winkelmand'];
+            foreach($winkelmand as $products)
+            {
+                
+            }
         } else {
             $winkelmand = array();
         }

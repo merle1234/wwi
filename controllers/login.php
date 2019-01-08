@@ -38,7 +38,7 @@ include 'views/login.phtml';
 
 function logoff (){
     $_SESSION["auth"] = 'false';
-
+    header('Location: ?controller=content&action=home');
 }
 
 }

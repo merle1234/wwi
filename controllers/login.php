@@ -38,4 +38,8 @@ include 'views/login.phtml';
 
 }
 
+public function logout(){
+    dvsfsaf
+}
+
 ?>

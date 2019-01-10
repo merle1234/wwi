@@ -26,7 +26,7 @@ $reslt = $content->getlogin($mail, $password);     // it call the getlogin() fun
 if($reslt == 'login')
 {
 $_SESSION["auth"] = 'true';
-    header("Refresh:0");
+    //header("Refresh:0");
 include 'views/afterlogin.phtml';
 }
 else
@@ -38,7 +38,7 @@ include 'views/login.phtml';
 
 function logoff (){
     $_SESSION["auth"] = 'false';
-    header('Location: ?controller=content&action=home');
+    //header('Location: ?controller=content&action=home');
 }
 
 }

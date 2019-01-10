@@ -18,8 +18,8 @@ class Basket
 
     public function getCustomerInfo($id)
     {
-        $conn=new  database();      
-        $id = $id[0]['UserId'];
+        $conn=new  database();
+        
         $sql = "SELECT * FROM users WHERE `userId` = $id";
         $result = $conn->query($sql);
        
@@ -30,7 +30,7 @@ public function Order()
     $conn=new  database();      
 
     $currentDate = date("Y/m/d");
-    $id = $_SESSION['UserId'][0]['UserId'];
+    $id = $_SESSION['UserId'];
    
     $orderId= rand();
     

@@ -18,7 +18,7 @@ background-color: #ADD8E6;
   float: right;
 }
 </style>
-<div style = "border:solid 1px black; width: 1000px;
+<div style = "width: 1000px;
     height: 100px;
     position: absolute;
     top:0;
@@ -33,6 +33,7 @@ background-color: #ADD8E6;
     <tr style="" class="basketproduct">
     <Td><img src="<?php $product['photo'] ?>"></td>
     <td><?php echo $product['stockitemname']?></td>
+    
     <td>Prijs: €<?php echo $product['unitprice']?></td>
     <td>hoeveelheid: <input type='number' value = <?php echo $product['amount']?>> </td> 
     </tr>
@@ -40,9 +41,17 @@ background-color: #ADD8E6;
     <?php endforeach; ?>
     <tr>
     <td>
+    <?php if($totaal >= 50){ $costs = "gratis";}else{ $costs = "€2.50"; $totaal = $totaal + 2.50;} ?>
+    Verzend kosten : <?php echo $costs ?>
+    </td>
+    </tr>
+    <tr>
+    <td>
     Totaal: €<?php echo $totaal; ?>
     </td>
     </tr>
+    </td>
+    
 </table>
 <button>opslaan</button>
 <a class="button" href="?controller=Basket&action=Info">Continue</a>

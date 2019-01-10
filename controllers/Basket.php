@@ -65,6 +65,14 @@ class Basket
     {
             $content = new \models\basket();
             $result = $content->Order();
+            $change = array("succes","error","succes","succes");
+            if($change[array_rand($change)] == "succes") 
+            {
+                 require_once('views/paymentsucces.phtml');                   
+            }else
+            {
+                require_once('views/paymenterror.phtml');                   
+            }
     }
     
 

@@ -8,11 +8,10 @@ class Registratie{
     {
         require_once('views/registratie.phtml');
     }
-    
     public function StoreData()
     {
         $email = $_POST['Email'];
-        $password = HashPassword($_POST['password']);
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $naam = $_POST['naam'];
         $adres = $_POST['adres'];
         $postcode = $_POST['postcode'];

@@ -24,22 +24,21 @@ class database
         $result = mysqli_query($this->conn,$query);
         $content = array();
                 
-          while($row = $result->fetch_assoc()) {
-             
-              $content[]=$row;
-          };
+        while($row = $result->fetch_assoc()) {
+            
+            $content[]=$row;
+        };
         
-         
         return $content;
     }
     public function Insert($query)
     {
         if (mysqli_query($this->conn,$query)) {
-            echo "Bedankt! Uw account is succevol aangemaakt.";
+            return mysqli_insert_id($this->conn);
         } else {
-            echo "Deze E-mail is reeds in gebruik.";
+            
         }
-        return mysqli_insert_id($this->conn);
+        var_dump(mysqli_error($this->conn));
     }
     public function escape_parameter($param) {
         return mysqli_real_escape_string($this->conn, $param);
@@ -59,11 +58,29 @@ class database
        
         if(count($content) == 1 )
         {
-            $status = true;
+            $status = $content;
+        }
+
+        return $status;
+    }
+
+    public function OrderLine()
+    {
+        if (mysqli_query($this->conn,$query)) {
+            echo "Bedankt! Voor uw bestelling";
+        }
+        var_dump(mysqli_error($this->conn));
+
+        return mysqli_insert_id($this->conn);
+    }
+    public function InsertOrder($query)
+    {
+        if (mysqli_query($this->conn,$query)) {
+            echo "Bedankt! Uw account is succevol aangemaakt.";
+        } else {
+            echo "Deze E-mail is reeds in gebruik.";
         }
         
-
-        var_dump($status);
-        return $status;
+        return mysqli_insert_id($this->conn);
     }
 }

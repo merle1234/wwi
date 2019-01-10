@@ -22,6 +22,14 @@ class Registratie{
 
         $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad, $tel);
 
+        if($store != null)
+        {
+            echo "er is iets misgegaan";
+        }
+        else{
+            Echo "Bedankt ".$naam."  voor het aanmaken van een account";
+            
+        }
     }
 }
 ?>

@@ -36,9 +36,9 @@ class database
         if (mysqli_query($this->conn,$query)) {
             return mysqli_insert_id($this->conn);
         } else {
-            
+           return 'error';
         }
-        var_dump(mysqli_error($this->conn));
+        
     }
     public function escape_parameter($param) {
         return mysqli_real_escape_string($this->conn, $param);

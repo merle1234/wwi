@@ -20,10 +20,9 @@ class Registratie{
         $content = new \models\registratie();
 
         $store = $content->StoreData($email,$password,$naam,$adres,$postcode,$stad, $tel);
-
-        if($store != null)
+        if($store == "error")
         {
-            echo "er is iets misgegaan";
+         echo "Dit email bestaat al";
         }
         else{
             Echo "Bedankt ".$naam."  voor het aanmaken van een account";

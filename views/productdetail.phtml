@@ -62,7 +62,7 @@ if ($result["QuantityOnHand"] > "999") {
 }
 ?></td></tr><br>
     <tr><th>Prijs</th><td>€ <?php echo $result["unitprice"] ; ?> Incl. Btw</td></tr>
-    <tr><th><form action="?controller=products&action=winkelmand" method="POST"><input type="hidden" name="product" value="<?php echo $product["stockitemid"] ; ?>"/>
+    <tr><th><form action="?controller=products&action=winkelmand" method="POST"><input type="hidden" name="product" value="<?php echo $result["stockitemid"] ; ?>"/>
     <tr><th>Aantal :<input type="number" name="amount" value="1" style="width:50px;border:1px solid"/><td><div class="button"><button type="submit">In winkelwagen</button></form></div></td></tr>
 </table>
 

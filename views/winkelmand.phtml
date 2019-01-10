@@ -14,7 +14,6 @@ background-color: #ADD8E6;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
-  float: right;
 }
 </style>
 <div style = "width: 1000px;
@@ -28,6 +27,7 @@ background-color: #ADD8E6;
     margin: auto;" class="winkelmand">
     <table>
 <?php $totaal = 0;
+
      foreach ($mergedArrays as $product) : ?>
     <tr style="" class="basketproduct">
     <Td><img src="<?php $product['photo'] ?>"></td>
@@ -52,7 +52,6 @@ background-color: #ADD8E6;
     </td>
     
 </table>
-<button>opslaan</button>
 <a class="button" href="?controller=Basket&action=Info">Continue</a>
 
 </div>

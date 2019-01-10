@@ -70,8 +70,12 @@ background-color: #ADD8E6;
         </td>      
     </tr> 
     <tr>
+    <Td>
+    <?php $totaal = $_SESSION['TotalPrice']; if($totaal >= 50){ $costs = "gratis";}else{ $costs = "€2.50"; $totaal = $totaal + 2.50;} ?>
+    Verzend kosten : <?php echo $costs ?>
+    <tr>
     <td>
-            Totaal prijs: €<?php echo $_SESSION['TotalPrice'] ?>
+            Totaal prijs: €<?php echo $totaal?>
     </td>
     </tr>  
 </table>

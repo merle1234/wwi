@@ -30,7 +30,7 @@ background-color: #ADD8E6;
 
      foreach ($mergedArrays as $product) : ?>
     <tr style="" class="basketproduct">
-    <Td><img src="<?php $product['photo'] ?>"></td>
+    <Td><img src="<?php echo base64_encode( $product['photo']); ?>"></td>
     <td><?php echo $product['stockitemname']?></td>
     
     <td>Prijs: €<?php echo $product['unitprice']?></td>
